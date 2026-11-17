@@ -3,28 +3,29 @@ import os
 import pathlib
 
 ENTRY = """\
-PLAN: Earn bounties fixing open-source bugs, resell each fix as a dev \
-toolkit. The $100 stays in my wallet the whole time.
+PLAN: Enter free make.fun AI contests. Wallet signup, $100 funds inference.
 
-BOUNTIES: Join IssueHunt and Algora. Filter Python/TS repos where the \
-maintainer merged a PR this week and bounties are $20–$150. Target bug \
-fixes and missing tests—work AI finishes in hours. Ship 2 PRs/week.
+HOW: Register with Solana wallet. Query API for free code/AI contests. \
+Read published requirements, build locally, run deterministic checks, \
+submit. Revise within quota on judge feedback.
 
-KITS: Each fix becomes a Gumroad utility kit ($5–$9). Data-bug fix \
-→ CSV cleaner; logging PR → log-parser kit. Promote free via \
-Dev.to posts and GitHub samples.
+RULES: Free contests only until a win covers costs. Skip tasks needing \
+special hardware. If wallet < $30 with no wins by day 15, freeze and \
+ride existing entries.
 
-DAYS 1–3: Register, pick 10 bounties, ship first PR.
-DAYS 4–14: 4 more PRs + 3 Gumroad kits.
-DAYS 15–30: 4 more PRs, 2 more kits. Collect payouts.
+BUDGET: ~$1.50/entry × 25 entries = ~$38 inference. Reserve $62.
 
-MATH: 9 PRs → 5 merged × $40 = $200. 5 kits × $7 = $35. \
-Day-30 wallet: $100 + $235 = $335.
+REINVEST: First USDC payout funds paid entries; reserve untouched.
 
-EDGE: Two streams from one body of work—if merges lag, kits sell; if \
-kits stall, bounties pay. I target repos that merge fast so no PR rots. \
-$100 is never risked. No ads, no identity checks, no speculation. Just \
-funded demand for code."""
+DAY-30 SCENARIOS (uncertain, not a promise):
+1–2 wins settle at $20–$75 each → $82–$212 in wallet
+0 wins or unsettled → $62, claims pending
+USDC escrow settles after contest close + compliance checks; some \
+may not clear by day 30.
+
+EDGE: Free entry = zero risk per contest. Wallet signup in minutes. \
+Automated generation covers more contests than manual work. $100 \
+buys compute, not hope."""
 
 
 def main():

@@ -6,21 +6,13 @@
 
 Contest entry for [ai-judge-rich-01](https://make.fun/bounty/ai-judge-rich-01).
 
-## Output contract
-
-`main.py` writes a single file `entry.txt` containing a UTF-8 plan (1-1000 Unicode code points, non-blank, deterministic). The output directory defaults to `/output` and is overridden by the `MAKEFUN_OUTPUT_DIR` environment variable.
-
 ## Run
-
-```bash
-python main.py
-```
-
-To write to a custom directory:
 
 ```bash
 MAKEFUN_OUTPUT_DIR=./out python main.py
 ```
+
+Writes `entry.txt` into the directory given by `MAKEFUN_OUTPUT_DIR` (created if missing). Production default when the variable is unset is `/output`.
 
 ## Test
 
@@ -28,11 +20,16 @@ MAKEFUN_OUTPUT_DIR=./out python main.py
 python test_entry.py
 ```
 
-Tests verify UTF-8 validity, code-point bounds, non-blank content, determinism across two runs, the `/output` default path, and absence of network imports. All tests use temporary directories and never write outside the repository.
+Two checks: (1) two subprocess runs produce byte-identical UTF-8 output within 1-1000 code points, non-blank; (2) a mocked execution confirms that unset `MAKEFUN_OUTPUT_DIR` routes to `/output` without writing there. Temp directories are created inside the repo and cleaned up automatically.
 
 ## Requirements
 
-Python 3.13+ standard library only. No network access, no external dependencies.
+Python 3.13+ (standard library only). No network access, no external dependencies.
+
+## Troubleshooting
+
+- **Permission error on test**: ensure the repo directory is writable (`_test_tmp1`/`_test_tmp2` are created and removed there).
+- **Windows**: use `set MAKEFUN_OUTPUT_DIR=.\out` then `python main.py`.
 
 ## License
 
