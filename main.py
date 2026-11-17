@@ -23,9 +23,9 @@ DAY-30 SCENARIOS (uncertain, not a promise):
 USDC escrow settles after contest close + compliance checks; some \
 may not clear by day 30.
 
-EDGE: Free entry = zero risk per contest. Wallet signup in minutes. \
-Automated generation covers more contests than manual work. $100 \
-buys compute, not hope."""
+EDGE: No entry fee, but inference spend is at risk. Wallet signup \
+in minutes. Automated generation covers more contests than manual \
+work. $100 buys compute, not hope."""
 
 
 def main():

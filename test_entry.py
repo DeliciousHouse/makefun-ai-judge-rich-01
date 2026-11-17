@@ -2,9 +2,9 @@
 import importlib.util
 import os
 import pathlib
-import shutil
 import subprocess
 import sys
+import tempfile
 import unittest.mock
 
 REPO = os.path.dirname(os.path.abspath(__file__))
@@ -25,11 +25,8 @@ def run_entry(output_dir):
 
 def test_output_and_determinism():
     """Two subprocess runs produce byte-identical valid UTF-8, 1-1000 codepoints, non-blank."""
-    tmp1 = os.path.join(REPO, "_test_tmp1")
-    tmp2 = os.path.join(REPO, "_test_tmp2")
-    try:
-        os.makedirs(tmp1, exist_ok=True)
-        os.makedirs(tmp2, exist_ok=True)
+    with tempfile.TemporaryDirectory(dir=REPO) as tmp1, \
+         tempfile.TemporaryDirectory(dir=REPO) as tmp2:
         raw1 = run_entry(tmp1)
         raw2 = run_entry(tmp2)
         assert raw1 == raw2, "Raw bytes differ between runs"
@@ -38,9 +35,6 @@ def test_output_and_determinism():
         assert 1 <= n <= 1000, f"{n} code points, need 1-1000"
         assert text.strip(), "Entry is blank"
         return n, text
-    finally:
-        shutil.rmtree(tmp1, ignore_errors=True)
-        shutil.rmtree(tmp2, ignore_errors=True)
 
 
 def test_default_output_dir():
