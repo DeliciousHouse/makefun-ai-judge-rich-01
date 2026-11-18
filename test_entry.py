@@ -65,9 +65,9 @@ def test_default_output_dir():
 def test_evidence_and_bankroll(text):
     """Lock the dated research snapshot and independently recompute the money."""
     for fact in (
-        "18 Nov 2026: 12 live bounties, 10 free; 36 launched in 7 days",
-        "Other accounts' paid top-100: $8129.97/1920 entries",
-        "all 864 accounts, $12592.47/16017 entries",
+        "18 Nov 2026: 11 live bounties, 9 free; 35 launched in 7 days",
+        "Other accounts' top 100 with 10+ entries: $7399.28/2293 entries",
+        "all 738 with 10+ entries, $10800.28/15318 entries",
         "losers included; cut 75% for selection/newcomer skill",
         "60 distinct bounty entries in 30 days, 80% cash-settled",
     ):
@@ -79,8 +79,8 @@ def test_evidence_and_bankroll(text):
     )
     assert len(equations) == 2, "Need central and lower equations"
     expected_inputs = [
-        ("85", "60", "0.8", "8129.97", "1920", "0.25", "135.81"),
-        ("85", "60", "0.8", "12592.47", "16017", "0.5", "103.87"),
+        ("85", "60", "0.8", "7399.28", "2293", "0.25", "123.72"),
+        ("85", "60", "0.8", "10800.28", "15318", "0.5", "101.92"),
     ]
     assert equations == expected_inputs, "Forecast no longer matches snapshot/model"
     results = []
