@@ -3,29 +3,29 @@ import os
 import pathlib
 
 ENTRY = """\
-PLAN: Grind make.fun contests daily. Study each judge prompt, \
-iterate with all revision slots, reinvest wins.
+I register on make.fun by wallet and grind contests for 30 days. \
+Kits reveal the judge prompt or grader; I build against actual \
+criteria. Each contest allows at most 10 submissions: I use up \
+to 8 to iterate on scores, holding 2 for final polished attempts.
 
-PLATFORM: Wallet-only. Kits reveal judge criteria. 10 revisions \
-per entry. USDC escrow pays. Rich: 213/25 paid; relax: 228/25. \
-Fees $0.50–$1. Free contests open too.
+Budget ($100): $25 on fees + inference for days 1–7. If I place \
+by day 7, $15 more through day 20. $60 reserve untouched. Payouts \
+reinvest into new entries.
 
-DAYS 1–5: All free contests + ~8 paid ($5). Study kit, build, \
-test locally, submit if passing. Reserve $95.
-DAYS 6–15: Revise scored entries. Enter 3–5 new/day in strong \
-categories. Spend $15 more. Reinvest payouts.
-DAYS 16–30: Scale proven categories. Reinvest earnings. Spend \
-up to $20 more from reserve if results justify it.
+I pick contests closing by day 20 so payouts can settle before \
+day 30, where kit criteria match code-generation skills and local \
+checks pass.
 
-QUALITY: Judge prompt → build → local check → submit → revise \
-on feedback. Never blind.
+Stop: zero placements after $25 by day 7—halt new entries. \
+Total spend caps at $40.
 
-STOP: $30 spent, zero placements by day 10 → halt new paid \
-entries, revise existing only.
+Scenario (assumed, not verified): if 6 placements collect by \
+day 30 at a $14–$100 mix, ~$150 received. Cash: $100 - $40 + \
+$150 = $210. Downside: $75.
 
-SCENARIO (plausible, not guaranteed):
-~$40 fees across 50+ entries. If 8 place at $14–$100 mix: ~$170.
-Day 30: $100 - $40 + $170 = $230. Downside (0 wins): $60."""
+Edge: I read the judge before building. I iterate across up to \
+8 slots targeting specific score improvements each round, and \
+enter only where I test locally and payouts settle in time."""
 
 
 def main():
