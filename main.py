@@ -3,29 +3,30 @@ import os
 import pathlib
 
 ENTRY = """\
-PLAN: Enter free make.fun AI contests. Wallet signup, $100 funds inference.
+PLAN: Enter free make.fun AI contests. $100 funds inference only.
 
-HOW: Register with Solana wallet. Query API for free code/AI contests. \
-Read published requirements, build locally, run deterministic checks, \
-submit. Revise within quota on judge feedback.
+DAY 1: Register wallet. Enter github-core-clone-01 (git forge; free, \
+~11K subs, prizes $14–$100) and tiny-chess-01 (4KB chess engine; \
+free, ~17K subs, same tiers). Both highly competitive.
 
-RULES: Free contests only until a win covers costs. Skip tasks needing \
-special hardware. If wallet < $30 with no wins by day 15, freeze and \
-ride existing entries.
+METHOD: Build locally, pass deterministic checks, submit, revise \
+within quota. ~$3 inference per entry × ~10 free contests = ~$30 \
+total. Only submit where checks pass.
 
-BUDGET: ~$1.50/entry × 25 entries = ~$38 inference. Reserve $62.
+COST/PAYOUT: $3 per entry. Collectible per top-20 place: $14–$100. \
+make.fun pays via on-chain USDC escrow after results + compliance. \
+May not settle by day 30.
 
-REINVEST: First USDC payout funds paid entries; reserve untouched.
+STOP-LOSS: Halt at $50 spent with no top-20 place by day 15. \
+Floor: $50.
 
-DAY-30 SCENARIOS (uncertain, not a promise):
-1–2 wins settle at $20–$75 each → $82–$212 in wallet
-0 wins or unsettled → $62, claims pending
-USDC escrow settles after contest close + compliance checks; some \
-may not clear by day 30.
+DAY-30 BALANCE:
+Most likely (no win): $70—inference spent, nothing collected
+If one top-20 place (assumed, not verified): $84–$170
+Placing is unlikely per entry in 10K+ fields.
 
-EDGE: No entry fee, but inference spend is at risk. Wallet signup \
-in minutes. Automated generation covers more contests than manual \
-work. $100 buys compute, not hope."""
+EDGE: Only enter where local benchmarks pass. Reuse tested code \
+across similar contests. Preserve capital over blind volume."""
 
 
 def main():

@@ -20,7 +20,7 @@ Writes `entry.txt` into the directory given by `MAKEFUN_OUTPUT_DIR` (created if 
 python test_entry.py
 ```
 
-Two checks: (1) two subprocess runs produce byte-identical UTF-8 output within 1-1000 code points, non-blank; (2) a mocked execution confirms that unset `MAKEFUN_OUTPUT_DIR` routes to `/output` without writing there. Temp directories are created inside the repo and cleaned up automatically.
+Two checks: (1) two subprocess runs produce byte-identical UTF-8 output within 1-1000 code points, non-blank; (2) a mocked execution confirms that unset `MAKEFUN_OUTPUT_DIR` routes to `/output` without writing there. Temp directories are allocated inside the repo via `tempfile` and cleaned up automatically.
 
 ## Requirements
 
@@ -28,7 +28,7 @@ Python 3.13+ (standard library only). No network access, no external dependencie
 
 ## Troubleshooting
 
-- **Permission error on test**: ensure the repo directory is writable (`_test_tmp1`/`_test_tmp2` are created and removed there).
+- **Permission error on test**: ensure the repo directory is writable (temp directories are created and removed there by `tempfile`).
 - **Windows**: use `set MAKEFUN_OUTPUT_DIR=.\out` then `python main.py`.
 
 ## License
