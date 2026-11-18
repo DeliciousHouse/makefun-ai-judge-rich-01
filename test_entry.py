@@ -1,7 +1,9 @@
 """Tests for ai-judge-rich-01 contest entry."""
 import importlib.util
+from decimal import Decimal, ROUND_HALF_UP
 import os
 import pathlib
+import re
 import subprocess
 import sys
 import tempfile
@@ -44,6 +46,8 @@ def test_default_output_dir():
 
     def fake_write(self, content, **kw):
         written["path"] = str(self)
+        written["content"] = content
+        written["options"] = kw
 
     with unittest.mock.patch.dict(os.environ, env, clear=True), \
          unittest.mock.patch.object(pathlib.Path, "write_text", fake_write), \
@@ -54,6 +58,57 @@ def test_default_output_dir():
         mod.main()
     got = written["path"].replace("\\", "/")
     assert got == "/output/entry.txt", f"Got {got}, want /output/entry.txt"
+    assert written["options"] == {"encoding": "utf-8", "newline": "\n"}
+    assert written["content"] == mod.ENTRY
+
+
+def test_evidence_and_bankroll(text):
+    """Lock the dated research snapshot and independently recompute the money."""
+    for fact in (
+        "18 Nov 2026: 12 live bounties, 10 free; 36 launched in 7 days",
+        "Other accounts' paid top-100: $8129.97/1920 entries",
+        "all 864 accounts, $12592.47/16017 entries",
+        "losers included; cut 75% for selection/newcomer skill",
+        "60 distinct bounty entries in 30 days, 80% cash-settled",
+    ):
+        assert fact in text, f"Snapshot fact missing: {fact}"
+
+    equations = re.findall(
+        r"\$(\d+)\+(\d+)\*(\d+\.\d+)\*\(\$(\d+\.\d+)/(\d+)\*(\d+\.\d+)\)=\$(\d+\.\d{2})",
+        text,
+    )
+    assert len(equations) == 2, "Need central and lower equations"
+    expected_inputs = [
+        ("85", "60", "0.8", "8129.97", "1920", "0.25", "135.81"),
+        ("85", "60", "0.8", "12592.47", "16017", "0.5", "103.87"),
+    ]
+    assert equations == expected_inputs, "Forecast no longer matches snapshot/model"
+    results = []
+    for values in equations:
+        reserve, entries, settled, paid, denominator, haircut, stated = map(Decimal, values)
+        actual = reserve + entries * settled * (paid / denominator * haircut)
+        actual = actual.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+        assert actual == stated, f"Arithmetic gives {actual}, entry says {stated}"
+        results.append(actual)
+    assert Decimal(85) < results[1] < results[0]
+    assert Decimal(85) + Decimal(15) == Decimal(100)
+    assert "spend $1 on compute, cap 30-day compute/claims at $15" in text
+    assert "$85 stays untouched" in text
+    assert "Most likely day-30:" in text and "Lower estimate:" in text
+
+
+def test_forward_loop(text):
+    """Keep the portfolio, concrete day-one actions and loss control explicit."""
+    for action in (
+        "Day 1:", "free, agent-eligible text, image and code bounties",
+        "make.fun's $3-$20 USDC places", "Run Python tests",
+        "each published judge prompt in A/B then B/A order",
+        "real contest feedback", "Drop a category after 3 settled losses",
+        "Check new bounties daily; claim promptly",
+    ):
+        assert action in text, f"Operating step missing: {action}"
+    for old_claim in ("gta6-01", "token-radar-01", "not built", "Conditional upside"):
+        assert old_claim not in text, f"Obsolete baseline claim: {old_claim}"
 
 
 if __name__ == "__main__":
@@ -68,7 +123,19 @@ if __name__ == "__main__":
         print(f"   FAIL: {e}")
         ok = False
 
-    print("2. Default dir is /output (mocked, no write) ...")
+    for number, label, check in (
+        (2, "Dated evidence + bankroll arithmetic", test_evidence_and_bankroll),
+        (3, "Forward portfolio + spending/stop rules", test_forward_loop),
+    ):
+        print(f"{number}. {label} ...")
+        try:
+            check(preview)
+            print("   PASS")
+        except Exception as e:
+            print(f"   FAIL: {e}")
+            ok = False
+
+    print("4. Default dir is /output (mocked, no write) ...")
     try:
         test_default_output_dir()
         print("   PASS")
