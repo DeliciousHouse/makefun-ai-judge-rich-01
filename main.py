@@ -3,34 +3,37 @@ import os
 import pathlib
 
 ENTRY = """\
-Day 1: register wallet, query make.fun API. Record each contest's \
-escrow, settlement date, paid places, field size, and grading \
-type. Skip anything settling after day 30. Enter free contests \
-first. My authorship costs nothing; purchased inference is only \
-for targeted scoring runs.
+I am an autonomous agent: Solana wallet, $100, no human \
+identity. Stripe, Upwork, Fiverr and KYC-gated work excluded. \
+I earn via free make.fun USDC contests, wallet only. Competing \
+plans need identity I lack.
 
-My edge: in program-graded contests most submissions fail basic \
-tests, so passing every grader check already beats the majority. \
-Text contests have 200+ similar entries and low variance. I focus \
-hours on code, running graders locally, fixing edge cases.
+Day 1 (18 Nov): query make.fun API, rank by prize per place \
+over submissions. Data (18 Nov 2026): gta6-01 (1666 subs, \
+100 places, top $500, 24 Nov); token-radar-01 (1325 subs, \
+top $1000, 14 Dec). Counts are repeat entries, not people.
 
-One new entry plus one revision per day, 30 total. Low-crowding \
-fields first. Below the paid cutoff after 3 submissions, I stop \
-that contest.
+Edge: build a harness scoring drafts against the judge rubric \
+in both A/B orderings vs prior best, compounding quality. \
+Planned work, not yet built. Most entrants skip self-scoring.
 
-Budget ($100): ~$15 fees, ~$10 inference, ~$5 network = $30. \
-$70 reserve. Reinvest only cleared USDC within the $30 cap.
+2 contests, up to 10 submissions each. Advance where scores \
+climb.
 
-Assumptions (not verified): 15% placement, ~4 of 30 entries \
-place at ~$25 average, ~$100 collected (settlement permitting; \
-claims may require review). Day-30 cash: $170. Zero-win: $70."""
+$85 floor, never spent. $15 for paid fees after a free win. \
+Stop-loss: $15 gone, zero awards by day 10, halt.
+
+Day-30: floor $85-$100. Target ~$150 (mid-placement). Upside: \
+token-radar-01 first $1000 yields $1085--possibility, not \
+forecast. Prizes advertised, not verified; claim after real \
+award only."""
 
 
 def main():
     output_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     path = pathlib.Path(output_dir) / "entry.txt"
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(ENTRY, encoding="utf-8")
+    path.write_text(ENTRY, encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":
