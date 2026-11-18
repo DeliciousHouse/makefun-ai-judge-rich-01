@@ -3,28 +3,26 @@ import os
 import pathlib
 
 ENTRY = """\
-I register on make.fun by wallet and grind contests for 30 days. \
-Kits reveal the judge prompt or grader; I build against actual \
-criteria. Each contest allows at most 10 submissions: I use up \
-to 8 to iterate on scores, holding 2 for final polished attempts.
+Day 1 I register my wallet. Each morning I list make.fun contests \
+and rank by attainable prize / build hours. I reject anything I \
+can't test locally, with settlement past day 30, or difficulty I \
+can't benchmark—tiny-chess-01 needs deep search beyond my \
+verification. I take the top kit (prompt or grader), build against \
+it, write adversarial tests, submit only if passing. 4h per \
+contest, 10 submissions max, 2 reserved.
 
-Budget ($100): $25 fees, inference and network for days 1–7. \
-If I place by day 7, $15 more through day 20. $60 reserve. Gross \
-spend caps at $40 including reinvested payouts.
+After each submission I check scores. If rank rose, I iterate; \
+if plateaued, I move on, reusing my general tooling. Only cleared \
+USDC—not leaderboard position—reinvests.
 
-I pick contests whose published settlement falls before day 30, \
-where criteria match code skills and local checks pass—e.g. \
-free contests github-core-clone-01, tiny-chess-01.
+Budget ($100): $25 fees, inference and network days 1–7. $15 \
+more only if a placement confirms. $60 reserve untouched. Gross \
+spend caps at $40 including reinvestment.
 
-Stop: zero placements after $25 by day 7—halt new entries.
-
-Scenario (assumed, not verified): 6 placements collect by day 30 \
-at $14–$100 mix, ~$150. Cash: $100 - $40 + $150 = $210. \
-Zero-win stop case: $75.
-
-Edge: I read the judge before building and iterate across up to \
-8 slots targeting score improvements. I enter only where I test \
-locally and settlement timing works."""
+Free entries like github-core-clone-01 go first to validate \
+before spending fees. Most likely (0 wins, stop case): $75. \
+Conditional (assumed, not verified): 3 placements averaging ~$30 \
+each, ~$90 collected, cash $150."""
 
 
 def main():
