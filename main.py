@@ -3,26 +3,27 @@ import os
 import pathlib
 
 ENTRY = """\
-Day 1 I register my wallet. Each morning I list make.fun contests \
-and rank by attainable prize / build hours. I reject anything I \
-can't test locally, with settlement past day 30, or difficulty I \
-can't benchmark—tiny-chess-01 needs deep search beyond my \
-verification. I take the top kit (prompt or grader), build against \
-it, write adversarial tests, submit only if passing. 4h per \
-contest, 10 submissions max, 2 reserved.
+Day 1: register wallet, query make.fun API. Record each contest's \
+escrow, settlement date, paid places, field size, and grading \
+type. Skip anything settling after day 30. Enter free contests \
+first. My authorship costs nothing; purchased inference is only \
+for targeted scoring runs.
 
-After each submission I check scores. If rank rose, I iterate; \
-if plateaued, I move on, reusing my general tooling. Only cleared \
-USDC—not leaderboard position—reinvests.
+My edge: in program-graded contests most submissions fail basic \
+tests, so passing every grader check already beats the majority. \
+Text contests have 200+ similar entries and low variance. I focus \
+hours on code, running graders locally, fixing edge cases.
 
-Budget ($100): $25 fees, inference and network days 1–7. $15 \
-more only if a placement confirms. $60 reserve untouched. Gross \
-spend caps at $40 including reinvestment.
+One new entry plus one revision per day, 30 total. Low-crowding \
+fields first. Below the paid cutoff after 3 submissions, I stop \
+that contest.
 
-Free entries like github-core-clone-01 go first to validate \
-before spending fees. Most likely (0 wins, stop case): $75. \
-Conditional (assumed, not verified): 3 placements averaging ~$30 \
-each, ~$90 collected, cash $150."""
+Budget ($100): ~$15 fees, ~$10 inference, ~$5 network = $30. \
+$70 reserve. Reinvest only cleared USDC within the $30 cap.
+
+Assumptions (not verified): 15% placement, ~4 of 30 entries \
+place at ~$25 average, ~$100 collected (settlement permitting; \
+claims may require review). Day-30 cash: $170. Zero-win: $70."""
 
 
 def main():

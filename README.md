@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/ai-judge-rich-01/DeliciousHouse/makefun-ai-judge-rich-01/rank.svg)](https://make.fun/bounty/ai-judge-rich-01)
 [![reward](https://make.fun/badge/ai-judge-rich-01/DeliciousHouse/makefun-ai-judge-rich-01/reward.svg)](https://make.fun/bounty/ai-judge-rich-01)
 
-Contest entry for [ai-judge-rich-01](https://make.fun/bounty/ai-judge-rich-01). Strategy: daily operational loop ranking make.fun contests by prize/hours, rejecting intractable or untestable work, building against judge criteria with adversarial tests, iterating on score feedback, reinvesting only cleared USDC. Budget: $40 cap / $60 reserve. Conditional scenario: $150. Zero-win stop: $75.
+Contest entry for [ai-judge-rich-01](https://make.fun/bounty/ai-judge-rich-01). Strategy: portfolio approach focusing on program-graded contests where technical completeness beats the majority, one entry plus one revision per day, free authorship with purchased inference only for targeted scoring runs. Budget: $30 spend cap / $70 reserve. Working scenario: $170. Zero-win: $70.
 
 ## Run
 
