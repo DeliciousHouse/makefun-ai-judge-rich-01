@@ -3,29 +3,29 @@ import os
 import pathlib
 
 ENTRY = """\
-PLAN: Two free make.fun contests, $0–$6 at risk, rest preserved.
+PLAN: Grind make.fun contests daily. Study each judge prompt, \
+iterate with all revision slots, reinvest wins.
 
-TARGETS:
-github-core-clone-01 (git forge, free, closes Nov 21)
-tiny-chess-01 (4KB chess engine, free, closes Nov 24)
-Per-place prizes $14–$100. Payer: make.fun, USDC escrow after \
-results + compliance.
+PLATFORM: Wallet-only. Kits reveal judge criteria. 10 revisions \
+per entry. USDC escrow pays. Rich: 213/25 paid; relax: 228/25. \
+Fees $0.50–$1. Free contests open too.
 
-DAY 1: Register wallet. Run free local benchmarks on both targets. \
-Spend $3 inference only where benchmarks show real quality—otherwise \
-skip and keep the $3. If both qualify: $6 at risk. If neither \
-qualifies: $100 retained, nothing submitted.
+DAYS 1–5: All free contests + ~8 paid ($5). Study kit, build, \
+test locally, submit if passing. Reserve $95.
+DAYS 6–15: Revise scored entries. Enter 3–5 new/day in strong \
+categories. Spend $15 more. Reinvest payouts.
+DAYS 16–30: Scale proven categories. Reinvest earnings. Spend \
+up to $20 more from reserve if results justify it.
 
-Hypothetical: 5% chance per entry of collecting minimum $14 gives \
-$0.70 expected—below $3 cost. So skip unless benchmarks justify \
-the spend. Not a calibrated estimate.
+QUALITY: Judge prompt → build → local check → submit → revise \
+on feedback. Never blind.
 
-MOST LIKELY (no win): $94–$100 depending on entries submitted.
-Expected (5% scenario, 2 entries): 100 - 6 + 2 × .05 × 14 \
-= $95.40. Settlement may lag past day 30.
+STOP: $30 spent, zero placements by day 10 → halt new paid \
+entries, revise existing only.
 
-EDGE: Conditional spend on benchmark evidence. Unpromising tests \
-preserve full $100."""
+SCENARIO (plausible, not guaranteed):
+~$40 fees across 50+ entries. If 8 place at $14–$100 mix: ~$170.
+Day 30: $100 - $40 + $170 = $230. Downside (0 wins): $60."""
 
 
 def main():
