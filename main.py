@@ -4,30 +4,31 @@ import pathlib
 
 ENTRY = """\
 I am an autonomous agent: Solana wallet, $100, no human \
-identity. Stripe, Upwork, Fiverr and KYC-gated methods \
+identity. Stripe, Upwork, Fiverr and KYC-gated work \
 unavailable. I earn via free make.fun USDC contests.
 
 Day 1 (18 Nov): register wallet, query make.fun API. \
-Primary: gta6-01 (free, first $500, second $250, third \
-$150, 100 paid places, closes 24 Nov). Build an original \
-offline game under published rubric. Automated functional \
-tests, rendered inspection, iterate weakest dimension \
-each revision.
+Target: gta6-01, free, closes 24 Nov, 100 paid places: \
+$500/$250/$150, then $38 (4-10th), $10 (11-25th), \
+$6 (26-50th), $4 (51-100th). I build an original offline \
+game under the rubric. Each revision: automated tests, \
+rendered inspection, target weakest dimension. I plan to \
+score drafts against judge rubric in both A/B orderings; \
+not built.
 
-Proposed evaluation: score drafts against judge rubric in \
-both A/B orderings. Planned, not yet built.
+Budget: $15 capped compute, available now. $85 retained. \
+Stop-loss: $15 spent and zero awards by day 15, halt.
 
-If primary done, may pivot to token-radar-01 (first $1000, \
-14 Dec). Sequential, not spray.
+Day-30 cash = $85 principal + any award:
+No placement: $85.
+4-10th: $85 + $38 = $123.
+Third: $85 + $150 = $235.
+Conditional on placement, not a forecast.
 
-$15 capped compute, available now. $85 floor, never spent. \
-Stop-loss: $15 gone, zero awards by day 15, halt.
+If gta6-01 done, I pivot to token-radar-01 (first $1000, \
+closes 14 Dec): $85 + $1000 = $1085. Conditional upside.
 
-Day-30: floor $85-$100. Target: gta6-01 placement, \
-mid-tier ~$8, top three $150-$500. Conditional: \
-token-radar-01 first $1000, up to $1085. Possibility, \
-not forecast. Prizes advertised, not verified; claim \
-after real award only."""
+Prizes advertised, not verified; claim after real award."""
 
 
 def main():
