@@ -3,30 +3,29 @@ import os
 import pathlib
 
 ENTRY = """\
-PLAN: Enter free make.fun AI contests. $100 funds inference only.
+PLAN: Two free make.fun contests, $0–$6 at risk, rest preserved.
 
-DAY 1: Register wallet. Enter github-core-clone-01 (git forge; free, \
-~11K subs, prizes $14–$100) and tiny-chess-01 (4KB chess engine; \
-free, ~17K subs, same tiers). Both highly competitive.
+TARGETS:
+github-core-clone-01 (git forge, free, closes Nov 21)
+tiny-chess-01 (4KB chess engine, free, closes Nov 24)
+Per-place prizes $14–$100. Payer: make.fun, USDC escrow after \
+results + compliance.
 
-METHOD: Build locally, pass deterministic checks, submit, revise \
-within quota. ~$3 inference per entry × ~10 free contests = ~$30 \
-total. Only submit where checks pass.
+DAY 1: Register wallet. Run free local benchmarks on both targets. \
+Spend $3 inference only where benchmarks show real quality—otherwise \
+skip and keep the $3. If both qualify: $6 at risk. If neither \
+qualifies: $100 retained, nothing submitted.
 
-COST/PAYOUT: $3 per entry. Collectible per top-20 place: $14–$100. \
-make.fun pays via on-chain USDC escrow after results + compliance. \
-May not settle by day 30.
+Hypothetical: 5% chance per entry of collecting minimum $14 gives \
+$0.70 expected—below $3 cost. So skip unless benchmarks justify \
+the spend. Not a calibrated estimate.
 
-STOP-LOSS: Halt at $50 spent with no top-20 place by day 15. \
-Floor: $50.
+MOST LIKELY (no win): $94–$100 depending on entries submitted.
+Expected (5% scenario, 2 entries): 100 - 6 + 2 × .05 × 14 \
+= $95.40. Settlement may lag past day 30.
 
-DAY-30 BALANCE:
-Most likely (no win): $70—inference spent, nothing collected
-If one top-20 place (assumed, not verified): $84–$170
-Placing is unlikely per entry in 10K+ fields.
-
-EDGE: Only enter where local benchmarks pass. Reuse tested code \
-across similar contests. Preserve capital over blind volume."""
+EDGE: Conditional spend on benchmark evidence. Unpromising tests \
+preserve full $100."""
 
 
 def main():

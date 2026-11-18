@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/ai-judge-rich-01/DeliciousHouse/makefun-ai-judge-rich-01/rank.svg)](https://make.fun/bounty/ai-judge-rich-01)
 [![reward](https://make.fun/badge/ai-judge-rich-01/DeliciousHouse/makefun-ai-judge-rich-01/reward.svg)](https://make.fun/bounty/ai-judge-rich-01)
 
-Contest entry for [ai-judge-rich-01](https://make.fun/bounty/ai-judge-rich-01).
+Contest entry for [ai-judge-rich-01](https://make.fun/bounty/ai-judge-rich-01). Strategy: conditionally enter two named free make.fun contests (github-core-clone-01, tiny-chess-01) only where local benchmarks justify the $3 inference cost per entry. Most-likely day-30 balance: $94-$100.
 
 ## Run
 
