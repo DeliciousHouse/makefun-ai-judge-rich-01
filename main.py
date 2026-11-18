@@ -12,12 +12,12 @@ and compare original drafts against each published judge prompt in A/B \
 then B/A order; submit, use real contest feedback to revise the weakest \
 criterion. Reuse tests, not entries. Drop a category after \
 3 settled losses.
-Estimate: 60 distinct bounty entries in 30 days, 80% cash-settled. Other accounts' \
-top 100 with 10+ entries: $7399.28/2293 entries=$3.227/entry, losers included; cut 75% \
-for selection/newcomer skill. Most likely day-30: \
-$85+60*0.8*($7399.28/2293*0.25)=$123.72. Lower estimate: all 738 with 10+ entries, \
-$10800.28/15318 entries, halved: \
-$85+60*0.8*($10800.28/15318*0.5)=$101.92. $85 stays untouched. \
+Estimate: 60 distinct bounty entries in 30 days vs 35 launches/7 days; \
+80% cash-settled. Paid leader gentle-badger-68: $570.50/25 entries; cut 50% \
+for selection/newcomer skill. Aggressive day-30 estimate: \
+$85+60*0.8*($570.50/25*0.5)=$632.68. Lower estimate: other accounts' \
+top 100 with 10+ entries, cut 75%: \
+$85+60*0.8*($7399.28/2293*0.25)=$123.72. Rates include losses; $85 stays untouched. \
 Check new bounties daily; claim promptly."""
 
 
