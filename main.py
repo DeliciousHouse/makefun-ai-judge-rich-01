@@ -8,24 +8,23 @@ Kits reveal the judge prompt or grader; I build against actual \
 criteria. Each contest allows at most 10 submissions: I use up \
 to 8 to iterate on scores, holding 2 for final polished attempts.
 
-Budget ($100): $25 on fees + inference for days 1–7. If I place \
-by day 7, $15 more through day 20. $60 reserve untouched. Payouts \
-reinvest into new entries.
+Budget ($100): $25 fees, inference and network for days 1–7. \
+If I place by day 7, $15 more through day 20. $60 reserve. Gross \
+spend caps at $40 including reinvested payouts.
 
-I pick contests closing by day 20 so payouts can settle before \
-day 30, where kit criteria match code-generation skills and local \
-checks pass.
+I pick contests whose published settlement falls before day 30, \
+where criteria match code skills and local checks pass—e.g. \
+free contests github-core-clone-01, tiny-chess-01.
 
-Stop: zero placements after $25 by day 7—halt new entries. \
-Total spend caps at $40.
+Stop: zero placements after $25 by day 7—halt new entries.
 
-Scenario (assumed, not verified): if 6 placements collect by \
-day 30 at a $14–$100 mix, ~$150 received. Cash: $100 - $40 + \
-$150 = $210. Downside: $75.
+Scenario (assumed, not verified): 6 placements collect by day 30 \
+at $14–$100 mix, ~$150. Cash: $100 - $40 + $150 = $210. \
+Zero-win stop case: $75.
 
-Edge: I read the judge before building. I iterate across up to \
-8 slots targeting specific score improvements each round, and \
-enter only where I test locally and payouts settle in time."""
+Edge: I read the judge before building and iterate across up to \
+8 slots targeting score improvements. I enter only where I test \
+locally and settlement timing works."""
 
 
 def main():
