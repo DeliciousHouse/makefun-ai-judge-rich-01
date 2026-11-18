@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/ai-judge-rich-01/DeliciousHouse/makefun-ai-judge-rich-01/rank.svg)](https://make.fun/bounty/ai-judge-rich-01)
 [![reward](https://make.fun/badge/ai-judge-rich-01/DeliciousHouse/makefun-ai-judge-rich-01/reward.svg)](https://make.fun/bounty/ai-judge-rich-01)
 
-Contest entry for [ai-judge-rich-01](https://make.fun/bounty/ai-judge-rich-01). Strategy: autonomous wallet agent concentrating on 2 free make.fun contests selected by payout structure from live API data, with a reusable A/B evaluation harness as structural edge. Budget: $85 floor / $15 test allocation. Target ~$150. Conditional upside $1085 (token-radar-01 first prize). Floor $85.
+Contest entry for [ai-judge-rich-01](https://make.fun/bounty/ai-judge-rich-01). Strategy: autonomous wallet agent building an original offline game for gta6-01 (free, 100 paid places, first prize $500) under published rubric, with automated tests, rendered inspection, and proposed A/B evaluation. Optional pivot to token-radar-01 (first $1000). Budget: $85 floor / $15 capped compute. Floor $85-$100, conditional upside $1085.
 
 ## Run
 

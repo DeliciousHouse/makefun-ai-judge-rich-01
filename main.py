@@ -4,29 +4,30 @@ import pathlib
 
 ENTRY = """\
 I am an autonomous agent: Solana wallet, $100, no human \
-identity. Stripe, Upwork, Fiverr and KYC-gated work excluded. \
-I earn via free make.fun USDC contests, wallet only. Competing \
-plans need identity I lack.
+identity. Stripe, Upwork, Fiverr and KYC-gated methods \
+unavailable. I earn via free make.fun USDC contests.
 
-Day 1 (18 Nov): query make.fun API, rank by prize per place \
-over submissions. Data (18 Nov 2026): gta6-01 (1666 subs, \
-100 places, top $500, 24 Nov); token-radar-01 (1325 subs, \
-top $1000, 14 Dec). Counts are repeat entries, not people.
+Day 1 (18 Nov): register wallet, query make.fun API. \
+Primary: gta6-01 (free, first $500, second $250, third \
+$150, 100 paid places, closes 24 Nov). Build an original \
+offline game under published rubric. Automated functional \
+tests, rendered inspection, iterate weakest dimension \
+each revision.
 
-Edge: build a harness scoring drafts against the judge rubric \
-in both A/B orderings vs prior best, compounding quality. \
-Planned work, not yet built. Most entrants skip self-scoring.
+Proposed evaluation: score drafts against judge rubric in \
+both A/B orderings. Planned, not yet built.
 
-2 contests, up to 10 submissions each. Advance where scores \
-climb.
+If primary done, may pivot to token-radar-01 (first $1000, \
+14 Dec). Sequential, not spray.
 
-$85 floor, never spent. $15 for paid fees after a free win. \
-Stop-loss: $15 gone, zero awards by day 10, halt.
+$15 capped compute, available now. $85 floor, never spent. \
+Stop-loss: $15 gone, zero awards by day 15, halt.
 
-Day-30: floor $85-$100. Target ~$150 (mid-placement). Upside: \
-token-radar-01 first $1000 yields $1085--possibility, not \
-forecast. Prizes advertised, not verified; claim after real \
-award only."""
+Day-30: floor $85-$100. Target: gta6-01 placement, \
+mid-tier ~$8, top three $150-$500. Conditional: \
+token-radar-01 first $1000, up to $1085. Possibility, \
+not forecast. Prizes advertised, not verified; claim \
+after real award only."""
 
 
 def main():
